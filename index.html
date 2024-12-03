@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art API</title>
+    <style>
+        body {
+            display: flex;
+            justify-content:center;
+            align-items:center;
+        }
+        .container {
+            text-align:center;
+            width: 80%;
+            margin:auto;
+        }
+        .artwork img {
+            width:100%;
+            height:auto;
+        }
+        button {
+            color:black;
+            padding:10px 20px;
+            color:pink;
+            border-color: black;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Random Art</h1>
+    <img id="artwork" class="artwork" src="" alt="Random Art Piece">
+    <div id="artwork-info">
+    <p id="title"></p>
+    <p id="description"></p>
+    <p id="artist"></p>
+    </div>
+    <button id="shuffle">Shuffle</button>
+</div>
+    <script>
+        var store = {};
+
+        async function fetchRandomArt() {
+            await fetch("https://api.artic.edu/api/v1/artworks")
+            .then (response => response.json())
+            .then (data => {
+                store.apiData = data;
+                displayData(store.apiData);
+            })
+            .catch(error => console.error('Error:', error));
+        }
+        function displayData(data) {
+            const displayDiv = document.getElementById("data-display");
+        }
+    </script>
+    
+</body>
+</html>

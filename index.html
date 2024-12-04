@@ -9,10 +9,13 @@
             display: flex;
             justify-content:center;
             align-items:center;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            background-color:seashell;
         }
         .container {
             text-align:center;
             width: 80%;
+            max-height:80%;
             margin:auto;
             border-color:black;
         }
@@ -23,14 +26,23 @@
         button {
             color:black;
             padding:10px 20px;
-            color:pink;
-            border-color: black;
+            border-radius: 20%;
+            color:white;
+            background-color:darkolivegreen;
+            border-color: white;
+            font-size:20px;
+        }
+        h1 {
+            text-align:center;
         }
     </style>
 </head>
 <body>
 <div class="container">
-    <h1>Random Art</h1>
+    <p>
+    <h1>Random Art Button</h1>
+    <button id="shuffle">Another!</button>
+    </p>
     <div class="artframe">
     <img id="artwork" class="artwork" src="" alt="Random Art Piece">
     </div>
@@ -39,7 +51,7 @@
     <p id="date"></p>
     <p id="artist"></p>
     </div>
-    <button id="shuffle">Shuffle</button>
+    
 </div>
     <script>
        var store = {};

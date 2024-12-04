@@ -36,7 +36,7 @@
     </div>
     <div id="artwork-info">
     <p id="title"></p>
-    <p id="description"></p>
+    <p id="date"></p>
     <p id="artist"></p>
     </div>
     <button id="shuffle">Shuffle</button>
@@ -68,6 +68,7 @@
 
         const imgElement = document.getElementById("artwork");
         const titleElement = document.getElementById("title");
+        const dateElement = document.getElementById("date");
         const artistElement = document.getElementById("artist");
 
         const imageUrl = artwork.image_id
@@ -79,7 +80,7 @@
        
 
        titleElement.textContent = `Title: ${artwork.title || 'Unknown'}`;
-        descriptionElement.textContent = `Date: ${artwork.date_display || 'Unknown'}`;
+        dateElement.textContent = `Date: ${artwork.date_display || 'Unknown'}`;
         artistElement.textContent = `Artist: ${artwork.artist_display || 'Unknown'}`;
        }
 
